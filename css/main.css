@@ -15,12 +15,11 @@
          url("../fonts/Champagne_Limousines.ttf") format('truetype');
 }
 
-* {
+*, body, div, p, img, a, ul, li, h1, h2, h3 {
     margin: 0;
-    padding: 0
-}
-body {
-    width: 100%;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
     display: -webkit-flex;
     display: flex;
     -webkit-flex-row: row wrap;
@@ -28,24 +27,62 @@ body {
     flex-wrap: wrap;
     color: #ac9178
 }
+
+body,
+header,
+main,
+footer {
+    width: 100%;
+}
+
 h1,
 h2,
 h3 {
     font-family: 'Balham', serif;
 }
+
 h1 {
     color: #062152
 }
+
 h2 {
     color: #917840
 }
+
 p, a { 
     font-family: 'edelsans', 'Champagne & Limousines', sans-serif;
 }
-logo {
-    max-width: 350px;
+
+.logo {
+    width: 20vw
 }
+
+.autor {
+    width: 80vw;  
+}
+
+h1,
+.autor p {
+    width: 100%;
+    display: block;
+    text-align: right
+}
+
 main img {
     width: 100%;
     max-width: 100vw
+}
+
+@media all and (max-width:350px) { 
+
+    .logo {
+        display: none;
+    }
+ 
+}
+@media all and (min-width:350px) and (max-width:450px) { 
+
+    .logo {
+        display: flex
+    }
 }

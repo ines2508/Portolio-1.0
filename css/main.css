@@ -1,3 +1,20 @@
+/** Fonts **/
+
+@font-face {
+    font-family: 'Balham';
+    src: url("../fonts/Balham.otf") format('opentype'); 
+}
+@font-face { 
+    font-family: 'edelsans';
+    src: url("../fonts/edelsans_regular.otf") format('opentype'),
+         url("../_edelsans_regular.otf") format('opentype');
+}
+@font-face { 
+    font-family: 'Champagne & Limousines';
+    src: url("../fonts/Champagne&Limousines.otf") format('opentype'),
+         url("../fonts/Champagne_Limousines.ttf") format('truetype');
+}
+
 * {
     margin: 0;
     padding: 0
@@ -9,4 +26,19 @@ body {
     -webkit-flex-row: row wrap;
     flex-flow: row wrap;
     flex-wrap: wrap;
+    color: #ac9178
+}
+h1,
+h2,
+h3 {
+    font-family: 'Balham', serif;
+}
+h1 {
+    color: #062152
+}
+h2 {
+    color: #917840
+}
+p, a { 
+    font-family: 'edelsans', 'Champagne & Limousines', sans-serif;
 }

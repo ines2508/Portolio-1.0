@@ -42,3 +42,10 @@ h2 {
 p, a { 
     font-family: 'edelsans', 'Champagne & Limousines', sans-serif;
 }
+logo {
+    max-width: 350px;
+}
+main img {
+    width: 100%;
+    max-width: 100vw
+}

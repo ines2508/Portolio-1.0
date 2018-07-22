@@ -105,6 +105,38 @@ section {
     width: 100%;
     max-width: 100vw;
 }
+.portfolio_title {
+    text-align: center;
+}
+.portfolio_link {
+    text-align: center;
+}
+.portfolio_link a {
+    color: #062152;
+}
+footer {
+    justify-content: space-around;
+    padding: 10px 10px 10px 10px;
+    background: rgb(172,145,120);
+    background: -webkit-linear-gradient(rgb(201, 185, 169), rgb(172, 145, 120));
+    background: -o-linear-gradient(rgb(201, 185, 169), rgb(172, 145, 120));
+    background: -moz-linear-gradient(rgb(201, 185, 169), rgb(172, 145, 120));
+    background: linear-gradient(rgb(201, 185, 169), rgb(172, 145, 120));
+}
+address p {
+    text-align: center;
+    color: #917840;
+}
+.email a {
+    color: white;
+    letter-spacing: 0.2em;
+}
+.copy_right {
+    padding: 10px 0 0 0;
+    text-align: center;
+    color: rgb(201, 185, 169);
+    font-style: italic;
+}
 
 
 
@@ -119,4 +151,31 @@ section {
 }
 @media all and (min-width:350px) and (max-width:450px) { 
 
+}
+@media all and (min-width:451px) and (max-width:650px) { 
+
+}
+
+@media all and (min-width:651px) and (max-width:850px) { 
+    footer {
+        justify-content: space-between;
+    }
+    .copy_right {
+        text-align: right;
+    }
+    address p {
+        text-align: left;
+    }
+
+}
+@media all and (min-width:851px) {  
+    footer {
+        justify-content: space-between;
+    }
+    .copy_right {
+        text-align: right;
+    }
+    address p {
+        text-align: left;
+    }
 }

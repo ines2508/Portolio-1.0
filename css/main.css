@@ -142,21 +142,19 @@ address p {
 
 /** Media **/
 
-@media all and (max-width:350px) { 
+@media all and (max-width:450px) { 
     .motto_title,
     .motto {
         display: none;
     }
  
 }
-@media all and (min-width:350px) and (max-width:450px) { 
+
+@media all and (min-width:451px) and (max-width:750px) { 
 
 }
-@media all and (min-width:451px) and (max-width:650px) { 
 
-}
-
-@media all and (min-width:651px) and (max-width:850px) { 
+@media all and (min-width:751px) and (max-width:1020px) { 
     footer {
         justify-content: space-between;
     }
@@ -168,7 +166,12 @@ address p {
     }
 
 }
-@media all and (min-width:851px) {  
+@media all and (min-width:1021px) {  
+    body {
+        width: 1021px;
+        margin-left: auto;
+        margin-right: auto;
+    }
     footer {
         justify-content: space-between;
     }

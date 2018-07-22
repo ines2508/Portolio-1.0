@@ -142,6 +142,16 @@ address p {
 
 /** Media **/
 
+@media all and (max-width:250px) { 
+    .logo_xs {
+        display: none;
+    }
+    .autor_xs {
+        margin: 0 0 0 10px;
+    }
+ 
+}
+
 @media all and (max-width:450px) { 
     .motto_title,
     .motto {

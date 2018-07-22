@@ -28,6 +28,8 @@
 body,
 header,
 main,
+section,
+article,
 footer {
     display: flex;
     display: -webkit-flex;
@@ -78,16 +80,41 @@ header {
 .autor_title_xs {
     text-align: right;
 }
-
+.line_box {
+    width: 100vw;
+}
+.line {
+    box-sizing: border-box;
+    margin: 0 0 4px 0;
+    height: 3px;
+    background: #ac9178;
+}
 main img {
     width: 100%;
     max-width: 100vw;
 }
 
+section {
+    box-sizing: border-box;
+    padding: 10px 10px 20px 10px;
+}
+.portfolio_sites {
+    width: 100vw;
+}
+.portfolio_img {
+    width: 100%;
+    max-width: 100vw;
+}
+
+
+
 /** Media **/
 
 @media all and (max-width:350px) { 
-   
+    .motto_title,
+    .motto {
+        display: none;
+    }
  
 }
 @media all and (min-width:350px) and (max-width:450px) { 

@@ -196,18 +196,8 @@ address p {
     }
 }
 
+@media all and (min-width:501px) { 
 
-@media all and (min-width:501px) and (max-width:750px) { 
-    main {
-        height: 100%;
-        min-height: 276px;
-        background: url("../img/main/oryginal_750_x1.jpg");
- 
-    }
-
-    .motto_box {
-        padding: 35px 10px 0 215px;
-    }
     .motto_title {
         color: #ffffff;
         letter-spacing: 0.1em;
@@ -231,7 +221,22 @@ address p {
         color: #917840;
         font-size: 120%;
     }
+} 
+
+
+@media all and (min-width:501px) and (max-width:750px) { 
+    main {
+        height: 100%;
+        min-height: 276px;
+        background: url("../img/main/oryginal_750_x1.jpg");
+    }
+    .motto_box {
+        padding: 35px 10px 0 215px;
+    }
 }
+
+
+
 
 @media all and (min-width:751px) and (max-width:1024px) { 
     main {
@@ -239,28 +244,53 @@ address p {
         min-height: 377px;
         background: url("../img/main/oryginal_1024_x1.jpg");
     }
+    .motto_box {
+        padding: 80px 10px 0 290px;
+    }
+    .motto {
+        width: 70%;
+    }
+
     footer {
         justify-content: space-between;
     }
+
     .copy_right {
         text-align: right;
     }
+
     address p {
         text-align: left;
     }
-
 }
+
 @media all and (min-width:1025px) {  
-    main {
-        height: 100%;
-        min-height: 377px;
-        background: url("../img/main/oryginal_1024_x2.jpg");
-    }
+   
     body {
         width: 1025px;
         margin-left: auto;
         margin-right: auto;
     }
+
+    main {
+        height: 100%;
+        min-height: 377px;
+        background: url("../img/main/oryginal_1025_x2.jpg");
+    }
+
+    .motto_box {
+        padding: 65px 10px 0 350px;
+    }
+    .motto_title {
+        padding: 0 0 30px 0;
+    }
+    .motto {
+        width: 60%;
+        letter-spacing: 0.3em;
+        line-height: 180%;
+        padding: 30px;
+    }
+
     footer {
         justify-content: space-between;
     }

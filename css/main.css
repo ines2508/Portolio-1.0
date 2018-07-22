@@ -91,14 +91,7 @@ header {
 }
 
 .line_box {
-    width: 100vw;
-}
-
-.line {
-    box-sizing: border-box;
-    margin: 0 0 4px 0;
-    height: 3px;
-    background: #ac9178;
+    display: none;
 }
 
 main {
@@ -187,7 +180,7 @@ address p {
     }
 }
 
-@media all and (max-width:350px) {
+@media all and (min-width:251px) and (max-width:350px) {
 
     .logo_xs {
         height: 48px;
@@ -305,7 +298,7 @@ address p {
 }
 
 @media all and (min-width:751px) and (max-width:1024px) { 
-    
+
     header {
         margin: 10px 10px 8px 10px;
     }
@@ -316,6 +309,19 @@ address p {
 
     .autor_name_m {
         padding: 10px 0 0 0;
+    }
+    
+    .line_box {
+        display: block;
+        width: 100vw;
+    }
+
+    .line_m {
+        box-sizing: border-box;
+        margin: 0 0 15px 0;
+        height: 3px;
+        border: none;
+        background: rgb(172,145,120);
     }
 
     main {
@@ -363,6 +369,18 @@ address p {
 
     .autor_name_m {
         padding: 10px 0 0 0;
+    }
+
+    .line_box {
+        display: block;
+        width: 100vw;
+    }
+    .line_m {
+        box-sizing: border-box;
+        margin: 0 0 20px 0;
+        height: 4px;
+        border: none;
+        background: rgb(172,145,120);
     }
 
     main {

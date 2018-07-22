@@ -4,11 +4,13 @@
     font-family: "Balham";
     src: url("../fonts/Balham.otf") format('opentype'); 
 }
+
 @font-face { 
     font-family: "edelsans";
     src: url("../fonts/edelsans_regular.otf") format('opentype'),
          url("../_edelsans_regular.otf") format('opentype');
 }
+
 @font-face { 
     font-family: "Champagne & Limousines";
     src: url("../fonts/Champagne&Limousines.otf") format('opentype'),
@@ -17,7 +19,20 @@
 
 /** General settings **/
 
-*, body, div, p, img, a, ul, li, h1, h2, h3, header, main, footer {
+*, 
+body, 
+div, 
+p, 
+img, 
+a, 
+ul, 
+li, 
+h1, 
+h2, 
+h3, 
+header, 
+main, 
+footer {
     margin: 0;
     padding: 0;
     text-decoration: none;
@@ -93,11 +108,24 @@ main {
 
 section {
     box-sizing: border-box;
-    padding: 10px 10px 20px 10px;
+    width: 100vw;
+    padding: 25px 0 20px 0;
+   
 }
 
-.portfolio_sites {
-    width: 100vw;
+.portfolio_main_title {
+    box-sizing: border-box;
+    margin: 0 0 -15px 10px;
+}
+
+.portfolio_main_title::first-letter,
+.portfolio_title::first-letter {
+    font-size: 150%;
+}
+
+.portfolio_sites_xs {
+    width: 100%;
+    margin: 25px 0 0 0;
 }
 
 .portfolio_img {
@@ -107,6 +135,7 @@ section {
 
 .portfolio_title {
     text-align: center;
+    padding: 5px 0 0 0;
 }
 
 .portfolio_link {
@@ -119,13 +148,14 @@ section {
 
 footer {
     justify-content: space-around;
-    padding: 10px 10px 10px 10px;
+    padding: 15px 10px 10px 10px;
     background: rgb(172,145,120);
     background: -webkit-linear-gradient(rgb(201, 185, 169), rgb(172, 145, 120));
     background: -o-linear-gradient(rgb(201, 185, 169), rgb(172, 145, 120));
     background: -moz-linear-gradient(rgb(201, 185, 169), rgb(172, 145, 120));
     background: linear-gradient(rgb(201, 185, 169), rgb(172, 145, 120));
 }
+
 address p {
     text-align: center;
     color: #917840;
@@ -144,10 +174,10 @@ address p {
 }
 
 
-
 /** Media **/
 
 @media all and (max-width:250px) { 
+
     .logo_xs {
         display: none;
     }
@@ -156,37 +186,58 @@ address p {
         margin: 0 0 0 10px;
     }
 }
+
 @media all and (max-width:350px) {
+
+    .logo_xs {
+        height: 48px;
+    }
+
     main {
         height: 100%;
         min-height: 149px;
         background: url("../img/main/oryginal_350_x1.jpg");
     }
+
     .motto_title,
     .motto {
         display: none;
     }
 }
+
 @media all and (min-width: 351px) and (max-width:450px) {
+
     main {
         height: 100%;
         min-height: 192px;
         background: url("../img/main/oryginal_450_x1.jpg");
     }
+
     .motto_title,
     .motto {
         display: none;
     }
 }
+
 @media all and (min-width: 451px) and (max-width:500px) {
+
     main {
         height: 100%;
         min-height: 214px;
         background: url("../img/main/oryginal_500_x1.jpg");
     }
+
     .motto_title,
     .motto {
         display: none;
+    }
+
+    article {
+        justify-content: space-between;
+    }
+
+    .portfolio_sites_m {
+        width: 45%;
     }
 }
 
@@ -197,9 +248,11 @@ address p {
         letter-spacing: 0.1em;
         padding: 0 0 20px 0;
     }
+
     .motto_title::first-letter {
         font-size: 200%;
     }
+
     .motto {
         padding: 20px;
         background: #f8f9fa;
@@ -210,55 +263,71 @@ address p {
         line-height: 150%;
         text-align: justify;
     }
+
     .bold_names {
         letter-spacing: 0.2em;
         color: #917840;
         font-size: 120%;
     }
+
+    article {
+        justify-content: space-between;
+    }
+
+    .portfolio_sites_l {
+        width: 30%;
+    }
 } 
 
-
 @media all and (min-width:501px) and (max-width:750px) { 
+
     header {
         margin: 6px 10px 0 6px;   
     }
+
     .logo_m {
         height: 65px;
     }
+
     .autor_name_m {
         padding: 10px 0 0 0;
     }
+
     main {
         height: 100%;
         min-height: 276px;
         background: url("../img/main/oryginal_750_x1.jpg");
     }
+
     .motto_box {
         padding: 35px 10px 0 215px;
     }
 }
 
-
-
-
 @media all and (min-width:751px) and (max-width:1024px) { 
+    
     header {
         margin: 10px 10px 8px 10px;
     }
+
     .logo_m {
         height: 70px;
     }
+
     .autor_name_m {
         padding: 10px 0 0 0;
     }
+
     main {
         height: 100%;
         min-height: 377px;
         background: url("../img/main/oryginal_1024_x1.jpg");
     }
+
     .motto_box {
         padding: 80px 10px 0 290px;
     }
+
     .motto {
         width: 70%;
     }
@@ -277,19 +346,21 @@ address p {
 }
 
 @media all and (min-width:1025px) {  
-   
+
     body {
         width: 1025px;
         margin-left: auto;
         margin-right: auto;
     }
+
     header {
         margin: 10px 10px 8px 10px;
     }
-    
+
     .logo_m {
         height: 70px;
     }
+
     .autor_name_m {
         padding: 10px 0 0 0;
     }
@@ -303,9 +374,11 @@ address p {
     .motto_box {
         padding: 65px 10px 0 350px;
     }
+
     .motto_title {
         padding: 0 0 30px 0;
     }
+
     .motto {
         width: 60%;
         letter-spacing: 0.3em;
@@ -316,9 +389,11 @@ address p {
     footer {
         justify-content: space-between;
     }
+
     .copy_right {
         text-align: right;
     }
+
     address p {
         text-align: left;
     }

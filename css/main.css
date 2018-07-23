@@ -60,6 +60,7 @@ h1,
 h2,
 h3 {
     font-family: "Balham", serif;
+    font-weight: 500;
 }
 
 h1 {
@@ -68,6 +69,12 @@ h1 {
 
 h2 {
     color: #917840;
+}
+
+.portfolio_main_title::first-letter,
+.portfolio_title::first-letter,
+.about_me_title::first-letter {
+    font-size: 150%;
 }
 
 p, a { 
@@ -90,9 +97,24 @@ header {
     text-align: right;
 }
 
+/** Line under header **/
+
 .line_box {
-    display: none;
+    display: block;
+    width: 100vw;
 }
+
+.line_m {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    height: 3px;
+    border: none;
+    background: -moz-linear-gradient(left, rgba(172,145,120,1) 0%, rgba(172,145,120,0.5) 23%, rgba(172,145,120,0.26) 46%, rgba(172,145,120,0) 76%, rgba(172,145,120,0) 77%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, rgba(172,145,120,1) 0%,rgba(172,145,120,0.5) 23%,rgba(172,145,120,0.26) 46%,rgba(172,145,120,0) 76%,rgba(172,145,120,0) 77%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, rgba(172,145,120,1) 0%,rgba(172,145,120,0.5) 23%,rgba(172,145,120,0.26) 46%,rgba(172,145,120,0) 76%,rgba(172,145,120,0) 77%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ac9178', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 */   
+}   
 
 /** Main - hero image **/
 
@@ -114,14 +136,12 @@ main {
     margin: 0 0 -15px 10px;
 }
 
-.portfolio_main_title::first-letter,
-.portfolio_title::first-letter {
-    font-size: 150%;
-}
-
 .portfolio_sites_xs {
     width: 100%;
     padding: 25px 0 0 0;
+}
+.line_box_img {
+    max-width: 100vw; 
 }
 
 .portfolio_img {
@@ -161,6 +181,43 @@ main {
 
 .portfolio_link a {
     color: #062152;
+}
+
+/** About me - section **/
+.about_me {
+    margin: 10px 0 10px 0;
+}
+
+.about_me_title {
+    padding: 0 0 10px 10px;
+}
+
+.about_me_info {
+    box-sizing: border-box;
+    width: 100vw;
+    justify-content: center; 
+    align-items: center;
+    padding: 30px 10px 0 10px;
+}
+.about_me_photo {
+    width: 100%; 
+}
+
+.photo_ep {
+    width: 100%;
+    max-width: 300px;
+    max-width: 100%;
+    border-radius: 50%;
+    padding: 0 10px 10px 0;
+    background: #f8f9fa;
+}
+
+.about_me_text {
+   width: 100%;
+}
+
+.aboutEP {
+    color: #917840;
 }
 
 /** Footer **/
@@ -266,23 +323,31 @@ address p {
     .motto {
         display: none;
     }
-}
 
-@media all and (min-width:500px) and (max-width: 749px) { 
+/** About me - section **/
 
-
-/** Section - portfolio links **/
-
-    article {
-        justify-content: space-around;
+    .about_me_info {
+        justify-content: space-around; 
+        align-items: flex-start;
+        padding: 20px 10px 0 10px;
     }
 
-    .portfolio_sites_m {
-        width: 45%;
+    .about_me_photo_s {
+        width: 15%; 
+    }
+    
+    .about_me_text_s {
+       width: 80%;
     }
 }
 
 @media all and (min-width:501px) { 
+
+/** Line under header **/
+
+.line_end {
+    margin: 0 0 15px 0;
+}
 
 /** Main - hero image **/
 
@@ -314,21 +379,6 @@ address p {
     }
 
 
-
-@media all and (min-width:750px)  { 
-
-    /** Section - portfolio links **/
-
-    article {
-        justify-content: space-between;
-    }
-
-    .portfolio_sites_l {
-        width: 30%;
-    }
-} 
-
-
 @media all and (min-width:501px) and (max-width:750px) { 
 
 /** Header **/
@@ -356,7 +406,64 @@ address p {
     .motto_box {
         padding: 35px 10px 0 215px;
     }
+
+/** Section - portfolio links **/
+
+    article {
+        justify-content: space-around;
+    }
+
+    .portfolio_sites_m {
+        width: 45%;
+    }
+
+    /** About me - section **/
+
+    .about_me_info {
+        justify-content: space-around; 
+        align-items: center;
+        padding: 20px 10px 0 10px;
+    }
+
+    .about_me_photo_s {
+        width: 25%; 
+    }
+
+    .about_me_text_s {
+    width: 70%;
+    }
 }
+
+@media all and (min-width:750px)  { 
+
+    /** Section - portfolio links **/
+
+    article {
+        justify-content: space-between;
+    }
+
+    .portfolio_sites_l {
+        width: 30%;
+    }
+
+    /** About me info **/
+
+    .about_me_info {
+        justify-content: center; 
+        align-items: center;
+        padding: 10px 10px 0 10px;
+    }
+
+    .about_me_photo_s {
+        width: 25%; 
+    }
+    
+    .about_me_text_s {
+       width: 50%;
+       margin-left: 20px;
+    }  
+} 
+
 
 @media all and (min-width:751px) and (max-width:1024px) { 
 
@@ -372,24 +479,6 @@ address p {
 
     .autor_name_m {
         padding: 10px 0 0 0;
-    }
-
-/** Line under header **/
-
-    .line_box {
-        display: block;
-        width: 100vw;
-    }
-
-    .line_m {
-        box-sizing: border-box;
-        margin: 0 0 15px 0;
-        height: 3px;
-        border: none;
-        background: -moz-linear-gradient(left, rgba(172,145,120,1) 0%, rgba(172,145,120,0.5) 23%, rgba(172,145,120,0.26) 46%, rgba(172,145,120,0) 76%, rgba(172,145,120,0) 77%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
-        background: -webkit-linear-gradient(left, rgba(172,145,120,1) 0%,rgba(172,145,120,0.5) 23%,rgba(172,145,120,0.26) 46%,rgba(172,145,120,0) 76%,rgba(172,145,120,0) 77%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
-        background: linear-gradient(to right, rgba(172,145,120,1) 0%,rgba(172,145,120,0.5) 23%,rgba(172,145,120,0.26) 46%,rgba(172,145,120,0) 76%,rgba(172,145,120,0) 77%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ac9178', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 */   
     }
 
 /** Main - hero image **/
@@ -412,7 +501,14 @@ address p {
 
     .portfolio_main_title {
         margin-left: 20px;
-    }
+    } 
+
+     /** About me - section **/
+
+    .about_me_title {
+            padding-left: 20px;
+        } 
+    
 
 /** Footer **/
 
@@ -444,6 +540,7 @@ address p {
 
     header {
         margin: 20px 0 10px 0;
+        padding: 0;
     }
 
     .logo_m {
@@ -453,24 +550,6 @@ address p {
     .autor_name_m {
         padding: 10px 0 0 0;
     }
-
-/** Line under header **/
-
-    .line_box {
-        display: block;
-        width: 100vw;
-    }
-
-    .line_m {
-        box-sizing: border-box;
-        margin: 0 0 20px 0;
-        height: 3px;
-        border: none;
-        background: -moz-linear-gradient(left, rgba(172,145,120,1) 0%, rgba(172,145,120,0.5) 23%, rgba(172,145,120,0.26) 46%, rgba(172,145,120,0) 76%, rgba(172,145,120,0) 77%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
-        background: -webkit-linear-gradient(left, rgba(172,145,120,1) 0%,rgba(172,145,120,0.5) 23%,rgba(172,145,120,0.26) 46%,rgba(172,145,120,0) 76%,rgba(172,145,120,0) 77%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
-        background: linear-gradient(to right, rgba(172,145,120,1) 0%,rgba(172,145,120,0.5) 23%,rgba(172,145,120,0.26) 46%,rgba(172,145,120,0) 76%,rgba(172,145,120,0) 77%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ac9178', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 */   
-    }   
 
 /** Main - hero image **/
 
@@ -500,6 +579,12 @@ address p {
     .portfolio_main_title {
         margin-left: 30px;
     }
+ /** About me - section **/
+
+    .about_me_title {
+        padding-left: 30px;
+    } 
+
 
 /** Footer **/
 

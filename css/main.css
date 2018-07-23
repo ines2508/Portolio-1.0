@@ -200,7 +200,7 @@ main {
     padding: 30px 10px 0 10px;
 }
 .about_me_photo {
-    width: 100%; 
+    width: 50%; 
 }
 
 .photo_ep {
@@ -224,7 +224,7 @@ main {
 
 footer {
     justify-content: space-around;
-    padding: 15px 10px 10px 10px;
+    padding: 0 10px 10px 0;
     margin: 10px 0 0 0;
     background: rgb(172,145,120);
     background: -webkit-linear-gradient(rgb(201, 185, 169), rgb(172, 145, 120));
@@ -236,6 +236,7 @@ footer {
 address p {
     text-align: center;
     color: #917840;
+    padding: 10px 0 0 0;
 }
 
 .email a {
@@ -288,7 +289,7 @@ address p {
 /** Footer **/
 
     footer {
-        padding: 10px 0 10px 0;
+        padding: 0 0 10px 0;
     }
 
 }
@@ -514,7 +515,7 @@ address p {
 
     footer {
         justify-content: space-between;
-        padding: 15px 20px 10px 20px;
+        padding: 0 20px 10px 0;
     }
 
     .copy_right {
@@ -525,6 +526,7 @@ address p {
     address p {
         text-align: left;
         width: 65%;
+        padding: 0 0 0 20px;
     }
 }
 
@@ -590,7 +592,7 @@ address p {
 
     footer {
         justify-content: space-between;
-        padding: 15px 20px 10px 20px;
+        padding: 0 20px 10px 0;
     }
 
     .copy_right {
@@ -601,6 +603,7 @@ address p {
     address p {
         text-align: left;
         width: 65%;
+        padding: 5px 0 0 30px;
     }
 }
 

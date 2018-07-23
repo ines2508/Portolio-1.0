@@ -2,19 +2,19 @@
 
 @font-face {
     font-family: "Balham";
-    src: url("../fonts/Balham.otf") format('opentype'); 
+    src: url(../fonts/Balham.otf) format('opentype'); 
 }
 
 @font-face { 
     font-family: "edelsans";
-    src: url("../fonts/edelsans_regular.otf") format('opentype'),
-         url("../_edelsans_regular.otf") format('opentype');
+    src: url(../fonts/edelsans_regular.otf) format('opentype'),
+         url(../_edelsans_regular.otf) format('opentype');
 }
 
 @font-face { 
     font-family: "Champagne & Limousines";
-    src: url("../fonts/Champagne&Limousines.otf") format('opentype'),
-         url("../fonts/Champagne_Limousines.ttf") format('truetype');
+    src: url(../fonts/Champagne&Limousines.otf) format('opentype'),
+         url(../fonts/Champagne_Limousines.ttf) format('truetype');
 }
 
 /** General settings **/
@@ -103,7 +103,7 @@ main {
 
 /** Section - links for portfolio outside websides **/
 
-section {
+.portfolio {
     box-sizing: border-box;
     width: 100vw;
     padding: 25px 0 20px 0;  
@@ -139,15 +139,15 @@ section {
 }
 
 .portfolio_gallery {
-    background: url("../img/portfolio/part_all_07.jpg") no-repeat left;
+    background: url(../img/portfolio/part_all_07.jpg) no-repeat left;
 }
 
 .portfolio_code {
-    background: url("../img/portfolio/part_all_07.jpg") no-repeat center;
+    background: url(../img/portfolio/part_all_07.jpg) no-repeat center;
 }
 
 .portfolio_new_project {
-    background: url("../img/portfolio/part_all_07.jpg") no-repeat right;
+    background: url(../img/portfolio/part_all_07.jpg) no-repeat right;
 }
 
 .portfolio_title {
@@ -168,6 +168,7 @@ section {
 footer {
     justify-content: space-around;
     padding: 15px 10px 10px 10px;
+    margin: 10px 0 0 0;
     background: rgb(172,145,120);
     background: -webkit-linear-gradient(rgb(201, 185, 169), rgb(172, 145, 120));
     background: -o-linear-gradient(rgb(201, 185, 169), rgb(172, 145, 120));
@@ -195,20 +196,7 @@ address p {
 
 /** ------ Media ------- **/
 
-@media all and (max-width:250px) { 
-
-/** Header **/
-
-    .logo_xs {
-        display: none;
-    }
-
-    .autor_xs {
-        margin: 0 0 0 10px;
-    }
-}
-
-@media all and (min-width:251px) and (max-width:350px) {
+@media all and (max-width:309px) { 
 
 /** Header **/
 
@@ -216,32 +204,50 @@ address p {
         height: 48px;
     }
 
+    .autor_name_xs {
+        font-size: 1.8em;
+    }
+
+    .autor_title_xs {
+        font-size: 0.8em;
+    }
+
+    .autor_xs {
+        margin: 0 0 0 10px;
+    }
+
 /** Main - hero image **/
 
     main {
         height: 100%;
         min-height: 149px;
-        background: url("../img/main/oryginal_350_x1.jpg");
+        background: url(../img/main/oryginal_350_x1.jpg);
     }
 
-    .motto_title,
-    .motto {
+    .motto_box {
         display: none;
     }
+
+/** Footer **/
+
+    footer {
+        padding: 10px 0 10px 0;
+    }
+
 }
 
-@media all and (min-width: 351px) and (max-width:450px) {
+
+@media all and (min-width: 310px) and (max-width:450px) {
 
 /** Main - hero image **/
 
     main {
         height: 100%;
         min-height: 192px;
-        background: url("../img/main/oryginal_450_x1.jpg");
+        background: url(../img/main/oryginal_450_x1.jpg);
     }
 
-    .motto_title,
-    .motto {
+    .motto_box {
         display: none;
     }
 }
@@ -253,7 +259,7 @@ address p {
     main {
         height: 100%;
         min-height: 214px;
-        background: url("../img/main/oryginal_500_x1.jpg");
+        background: url(../img/main/oryginal_500_x1.jpg);
     }
 
     .motto_title,
@@ -261,7 +267,8 @@ address p {
         display: none;
     }
 }
-    @media all and (min-width:500px) and (max-width: 749px) { 
+
+@media all and (min-width:500px) and (max-width: 749px) { 
 
 
 /** Section - portfolio links **/
@@ -327,7 +334,7 @@ address p {
 /** Header **/
 
     header {
-        margin: 6px 10px 0 6px;   
+        padding: 10px;   
     }
 
     .logo_m {
@@ -343,7 +350,7 @@ address p {
     main {
         height: 100%;
         min-height: 276px;
-        background: url("../img/main/oryginal_750_x1.jpg");
+        background: url(../img/main/oryginal_750_x1.jpg);
     }
 
     .motto_box {
@@ -356,7 +363,7 @@ address p {
 /** Header **/
 
     header {
-        margin: 10px 10px 8px 10px;
+        padding: 15px 20px 10px 18px;
     }
 
     .logo_m {
@@ -390,7 +397,7 @@ address p {
     main {
         height: 100%;
         min-height: 377px;
-        background: url("../img/main/oryginal_1024_x1.jpg");
+        background: url(../img/main/oryginal_1024_x1.jpg);
     }
 
     .motto_box {
@@ -399,6 +406,12 @@ address p {
 
     .motto {
         width: 70%;
+    }
+
+    /** Main - portfolio sites **/
+
+    .portfolio_main_title {
+        margin-left: 20px;
     }
 
 /** Footer **/
@@ -431,7 +444,6 @@ address p {
 
     header {
         margin: 20px 0 10px 0;
-        padding: 0;
     }
 
     .logo_m {
@@ -448,6 +460,7 @@ address p {
         display: block;
         width: 100vw;
     }
+
     .line_m {
         box-sizing: border-box;
         margin: 0 0 20px 0;
@@ -464,7 +477,7 @@ address p {
     main {
         height: 100%;
         min-height: 377px;
-        background: url("../img/main/oryginal_1025_x2.jpg");
+        background: url(../img/main/oryginal_1025_x2.jpg);
     }
 
     .motto_box {
@@ -482,6 +495,12 @@ address p {
         padding: 30px;
     }
 
+/** Main - portfolio sites **/
+
+    .portfolio_main_title {
+        margin-left: 30px;
+    }
+
 /** Footer **/
 
     footer {
@@ -497,5 +516,20 @@ address p {
     address p {
         text-align: left;
         width: 65%;
+    }
+}
+
+@media all and (min-width: 1900px) {
+
+    body {
+        width: 1900px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    main {
+        height: 100%;
+        min-height: 699px;
+        background: url(../img/main/oryginal_2560_x2.jpg);
     }
 }

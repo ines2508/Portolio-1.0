@@ -89,7 +89,13 @@ header {
 }
 
 .logo_xs {
-    height: 56px;
+    height: 56px;  
+}
+
+a:hover .logo_xs {
+    transform: matrix(1, 0, 0, 1, 1, 1);
+    -ms-transform: matrix(1, 0, 0, 1, 1, 1);
+    -webkit-transform: matrix(1, 0, 0, 1, 1, 1);
 }
 
 .autor_name_xs,
@@ -193,6 +199,10 @@ a:hover .portfolio_icon {
     color: #062152;
 }
 
+a:hover .portfolio_link {
+    color: #917840;
+}
+
 
 /** About me - section **/
 .about_me {
@@ -210,6 +220,7 @@ a:hover .portfolio_icon {
     align-items: center;
     padding: 30px 10px 0 10px;
 }
+
 .about_me_photo {
     width: 50%; 
 }
@@ -389,6 +400,7 @@ address p {
         color: #917840;
         font-size: 120%;
     }
+}
 
 
 @media all and (min-width:501px) and (max-width:750px) { 

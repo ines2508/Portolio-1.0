@@ -17,6 +17,35 @@
          url(../fonts/Champagne_Limousines.ttf) format('truetype');
 }
 
+
+/** Animations **/
+
+@keyframes dreams {
+    from {color: rgba(248,249,250,0);}
+    to {color: rgba(248,249,250,1);}
+    from {font-size: 0em;}
+    to {font-size:1.2em;}
+}
+
+@keyframes dreams2 {
+    from {color: rgba(248,249,250,0);}
+    to {color: rgba(248,249,250,1);}
+    from {font-size: 0em;}
+    to {font-size:1.3em;}
+}
+
+@keyframes motto { 
+    from {color: rgba(248,249,250,0);}
+    to {color: rgba(172, 145,120, 1);}
+    from {background-color: rgba(172, 145,120, 0);}
+    to {background-color: rgba(248, 249, 250, .8);} 
+}
+
+@keyframes motto_words {
+    from {color: rgba(248,249,250,0);}
+    to {color: rgba(145, 120,64,1);}   
+}
+
 /** General settings **/
 
 *, 
@@ -58,7 +87,9 @@ footer {
 
 h1,
 h2,
-h3 {
+h3,
+.motto_title,
+.motto {
     font-family: "Balham", serif;
     font-weight: 500;
 }
@@ -127,6 +158,10 @@ a:hover .logo_xs {
 main {
     background-size: 100%;
     background: no-repeat left top;
+}
+
+.motto_box {
+    display: none;
 }
 
 /** Section - links for portfolio outside websides **/
@@ -304,16 +339,13 @@ address p {
         background: url(../img/main/oryginal_350_x1.jpg);
     }
 
-    .motto_box {
-        display: none;
-    }
+ 
 
 /** Footer **/
 
     footer {
         padding: 0 0 10px 0;
     }
-
 }
 
 
@@ -327,9 +359,6 @@ address p {
         background: url(../img/main/oryginal_450_x1.jpg);
     }
 
-    .motto_box {
-        display: none;
-    }
 }
 
 @media all and (min-width: 451px) and (max-width:500px) {
@@ -340,11 +369,6 @@ address p {
         height: 100%;
         min-height: 214px;
         background: url(../img/main/oryginal_500_x1.jpg);
-    }
-
-    .motto_title,
-    .motto {
-        display: none;
     }
 
 /** About me - section **/
@@ -364,20 +388,29 @@ address p {
     }
 }
 
+
 @media all and (min-width:501px) { 
 
 /** Line under header **/
 
-.line_end {
-    margin: 0 0 15px 0;
-}
+    .line_end {
+        margin: 0 0 15px 0;
+    }
 
 /** Main - hero image **/
+    .motto_box {
+        display: block;
+    }
+
 
     .motto_title {
+        font-size: 1.2em;
         color: #ffffff;
         letter-spacing: 0.1em;
         padding: 0 0 20px 0;
+        animation-name: dreams;
+        animation-duration: 2s;
+        animation-timing-function: linear;
     }
 
     .motto_title::first-letter {
@@ -385,22 +418,31 @@ address p {
     }
 
     .motto {
-        padding: 20px;
+        padding: 10px 20px 10px 20px;
         background: #f8f9fa;
         background-color: rgb(248, 249, 250, 0.8);
         border-radius: 0.6em;
+        font-size: 1.1em;
         max-width: 85%;
         letter-spacing: 0.1em;
         line-height: 150%;
         text-align: justify;
+        animation-name: motto;
+        animation-duration: 5s;
+        animation-timing-function: ease-in;
     }
 
     .bold_names {
         letter-spacing: 0.2em;
         color: #917840;
-        font-size: 120%;
+        font-weight: 500;
+        animation-name: motto_words;
+        animation-duration: 8s;
+        animation-timing-function: ease-in;
+        font-size: 1.5em;
     }
 }
+
 
 
 @media all and (min-width:501px) and (max-width:750px) { 
@@ -431,6 +473,7 @@ address p {
         padding: 35px 10px 0 215px;
     }
 
+
 /** Section - portfolio links **/
 
     article {
@@ -459,6 +502,19 @@ address p {
 }
 
 @media all and (min-width:750px)  { 
+
+    /** Main - motto section **/
+    .motto_title {
+        animation-name: dreams2;
+        font-size: 1.3em;
+    }
+    
+    .motto {
+        font-size: 1.2em;
+        text-align: left;
+    }
+
+
 
     /** Section - portfolio links **/
 
@@ -518,7 +574,8 @@ address p {
     }
 
     .motto {
-        width: 70%;
+        width: 80%;
+        padding: 20px 30px 20px 30px;
     }
 
     /** Main - portfolio sites **/
@@ -593,10 +650,11 @@ address p {
     }
 
     .motto {
-        width: 60%;
+        width: 75%;
         letter-spacing: 0.3em;
         line-height: 180%;
-        padding: 30px;
+        padding: 20px 30px 20px 40px;
+        text-align: left;
     }
 
 /** Main - portfolio sites **/

@@ -11,12 +11,6 @@
          url(../_edelsans_regular.otf) format('opentype');
 }
 
-@font-face { 
-    font-family: "Champagne & Limousines";
-    src: url(../fonts/Champagne&Limousines.otf) format('opentype'),
-         url(../fonts/Champagne_Limousines.ttf) format('truetype');
-}
-
 
 /** Animations **/
 
@@ -94,12 +88,14 @@ h3,
     font-weight: 500;
 }
 
-h1 {
+h1,
+.skill_name {
     color: #062152;
 }
 
 h2 {
     color: #917840;
+    padding: 0 0 15px 10px;
 }
 
 .portfolio_main_title::first-letter,
@@ -108,13 +104,13 @@ h2 {
     font-size: 150%;
 }
 
-p, a { 
-    font-family: "edelsans", "Champagne & Limousines", sans-serif;
+p, a, span { 
+    font-family: "edelsans", sans-serif;
 }
 
 /** Header **/
 body {
-    margin-top: 12vh;
+    margin-top: 80px;
 }
 header {
     justify-content: space-between;
@@ -143,11 +139,14 @@ a:hover .logo_xs {
     text-align: right;
 }
 
-/** Line under header **/
+/** Line under header, end of sections, pictures in portfolio, footer **/
 
 .line_box {
     display: block;
     width: 100vw;
+}
+.line_header {
+    display: none;
 }
 
 .line_m {
@@ -169,21 +168,28 @@ main {
     background: no-repeat left top;
 }
 
+/** Too small to see on mobile and not all mobiles support animations **/
+
 .motto_box {
     display: none;
 }
 
-/** Section - links for portfolio outside websides **/
+/** Section - general settings **/
+
+section {
+    padding: 25px 0 20px 0;
+}
+
+/** Section - portfolio **/
 
 .portfolio {
     box-sizing: border-box;
     width: 100vw;
-    padding: 25px 0 20px 0;  
 }
 
 .portfolio_main_title {
     box-sizing: border-box;
-    margin: 0 0 -15px 10px;
+    margin: 0 0 -20px 0;
 }
 
 .portfolio_sites_xs {
@@ -248,20 +254,13 @@ a:hover .portfolio_link {
 }
 
 /** About me - section **/
-.about_me {
-    margin: 10px 0 10px 0;
-}
-
-.about_me_title {
-    padding: 0 0 10px 10px;
-}
 
 .about_me_info {
     box-sizing: border-box;
     width: 100vw;
     justify-content: center; 
     align-items: center;
-    padding: 30px 10px 0 10px;
+    padding: 0px 10px 0 10px;
 }
 
 .about_me_photo {
@@ -271,7 +270,7 @@ a:hover .portfolio_link {
 
 .photo_ep {
     width: 100%;
-    max-width: 300px;
+    max-width: 271px;
     max-width: 100%;
     border-radius: 50%;
     padding: 0 10px 10px 0;
@@ -292,6 +291,31 @@ a:hover .portfolio_link {
 .aboutEP {
     color: #917840;
 }
+
+/** My skills **/
+
+.my_skills_container {
+    justify-content: center;
+    align-items: center;
+}
+
+.skills {
+    width: 40vw;
+    height: 40vw;
+    background-color: #e4e5e5;
+    clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+    -webkit-clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+}
+
+.skill_name {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
 
 /** Footer **/
 
@@ -325,14 +349,12 @@ address p {
 }
 
 
-/** ------ Media ------- **/
+/** ------------------ Media -------------------- **/
 
 @media all and (max-width:309px) { 
 
+
 /** Header **/
-    body {
-        margin-top: 10vh;
-    }
 
     .logo_xs {
         height: 48px;
@@ -358,7 +380,9 @@ address p {
         background: url(../img/main/oryginal_350_x1.jpg);
     }
 
- 
+    .skills {
+        margin: 2vw;
+    }
 
 /** Footer **/
 
@@ -370,6 +394,7 @@ address p {
 
 @media all and (min-width: 310px) and (max-width:450px) {
 
+
 /** Main - hero image **/
 
     main {
@@ -377,10 +402,14 @@ address p {
         min-height: 192px;
         background: url(../img/main/oryginal_450_x1.jpg);
     }
-
 }
+    .skills {
+        margin: 2vw;
+    }
+
 
 @media all and (min-width: 451px) and (max-width:500px) {
+
 
 /** Main - hero image **/
 
@@ -405,6 +434,19 @@ address p {
     .about_me_text_s {
        width: 80%;
     }
+
+
+/** My skils **/
+
+    .my_skills_container {
+        justify-content: center;
+    }
+
+    .skills {
+        width: 25vw;
+        height: 25vw;
+        margin: 1vw;
+    }
 }
 
 
@@ -412,15 +454,14 @@ address p {
 
 /** Line under header **/
 
-    .line_end {
-        margin: 0;
+    .line_box {
+        display: block;
     }
 
 /** Main - hero image **/
     .motto_box {
         display: block;
     }
-
 
     .motto_title {
         font-size: 1.2em;
@@ -467,6 +508,7 @@ address p {
 
 @media all and (min-width:501px) and (max-width:750px) { 
 
+
 /** Header **/
 
     header {
@@ -504,12 +546,12 @@ address p {
         width: 45%;
     }
 
-    /** About me - section **/
+/** About me - section **/
 
     .about_me_info {
         justify-content: space-around; 
         align-items: center;
-        padding: 20px 10px 0 10px;
+        padding: 5px 10px 0 10px;
     }
 
     .about_me_photo_s {
@@ -520,11 +562,31 @@ address p {
     width: 70%;
     }
 
+/** My skills **/
+
+    .my_skills_container {
+        justify-content: center;
+    }
+
+    .skills {
+        width: 23vw;
+        height: 23vw;
+        margin: 1vw;
+    }
 }
+
 
 @media all and (min-width:750px)  { 
 
-    /** Main - motto section **/
+
+/** Titles of setions **/
+
+    h2 {
+        padding-left: 20px;
+    }
+
+/** Main - motto section **/
+
     .motto_title {
         animation-name: dreams2;
         font-size: 1.3em;
@@ -535,9 +597,7 @@ address p {
         text-align: left;
     }
 
-
-
-    /** Section - portfolio links **/
+/** Section - portfolio links **/
 
     article {
         justify-content: space-between;
@@ -547,7 +607,7 @@ address p {
         width: 30%;
     }
 
-    /** About me info **/
+/** About me info **/
 
     .about_me_info {
         justify-content: center; 
@@ -600,18 +660,18 @@ address p {
         padding: 20px 30px 20px 30px;
     }
 
-    /** Main - portfolio sites **/
 
-    .portfolio_main_title {
-        margin-left: 20px;
-    } 
+/** My skills **/
 
-     /** About me - section **/
+    .my_skills_container {
+        justify-content: center;
+    }
 
-    .about_me_title {
-            padding-left: 20px;
-        } 
-    
+    .skills {
+        width: 16vw;
+        height: 16vw;
+        margin: 1vw;
+    }
 
 /** Footer **/
 
@@ -628,9 +688,10 @@ address p {
     address p {
         text-align: left;
         width: 65%;
-        padding: 0 0 0 20px;
+        padding: 10px 0 0 20px;
     }
 }
+
 
 @media all and (min-width:1025px) {  
 
@@ -646,8 +707,7 @@ address p {
         padding: 20px 0 0 0;
         width: 1025px;
         margin-left: auto;
-        margin-right: auto;
-        
+        margin-right: auto;  
     }
 
     .logo_m {
@@ -664,7 +724,14 @@ address p {
     main {
         height: 100%;
         min-height: 377px;
-        background: url(../img/main/oryginal_1025_x2.jpg);
+        background-image: url(../img/main/oryginal_1024.jpg);
+        background-image: -webkit-image-set(
+            url(../img/main/oryginal_1024.jpg) 1x,
+            url(../img/main/oryginal_1024_x2.jpg) 2x
+        );   
+        background-image: image-set(
+            url(../img/main/oryginal_1024.jpg) 1x,
+            url(../img/main/oryginal_1024_x2.jpg) 2x);
     }
 
     .motto_box {
@@ -683,17 +750,18 @@ address p {
         text-align: left;
     }
 
-/** Main - portfolio sites **/
 
-    .portfolio_main_title {
-        margin-left: 30px;
+/** My skills **/
+
+    .my_skills_container {
+        justify-content: space-evenly;
     }
- /** About me - section **/
 
-    .about_me_title {
-        padding-left: 30px;
-    } 
-
+    .skills {
+        width: 120px;
+        height: 120px;
+        margin: 1px;
+    }
 
 /** Footer **/
 
@@ -710,7 +778,7 @@ address p {
     address p {
         text-align: left;
         width: 65%;
-        padding: 5px 0 0 30px;
+        padding: 10px 0 0 30px;
     }
 }
 

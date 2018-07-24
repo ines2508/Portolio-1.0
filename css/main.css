@@ -158,16 +158,29 @@ main {
     fill: alpha(opacity=90);
 }
 
+a:hover .portfolio_icon {
+    transform: matrix(2, 0, 0,2, 0, 0);
+    -ms-transform: matrix(1, 0, 0, 1, 0, 0);
+    -webkit-transform: matrix(1.2, 0, 0, 1.2, 0, 0);
+    color: white;    
+}
+
+.portfolio_gallery,
+.portfolio_code,
+.portfolio_new_project {
+    background: url(../img/portfolio/part_all_07.jpg) no-repeat;
+}
+
 .portfolio_gallery {
-    background: url(../img/portfolio/part_all_07.jpg) no-repeat left;
+    background-position: left;
 }
 
 .portfolio_code {
-    background: url(../img/portfolio/part_all_07.jpg) no-repeat center;
+    background-position: center;
 }
 
 .portfolio_new_project {
-    background: url(../img/portfolio/part_all_07.jpg) no-repeat right;
+    background-position: right;
 }
 
 .portfolio_title {
@@ -177,11 +190,9 @@ main {
 
 .portfolio_link {
     text-align: center;
-}
-
-.portfolio_link a {
     color: #062152;
 }
+
 
 /** About me - section **/
 .about_me {

@@ -648,7 +648,7 @@ address p {
     main {
         height: 100%;
         min-height: 377px;
-        background: url(../img/main/oryginal_1024_x1.jpg);
+        background: url(../img/main/oryginal_1024.jpg);
     }
 
     .motto_box {
@@ -782,29 +782,53 @@ address p {
     }
 }
 
-/** TODO - get a bigger screen and check 
+/** TODO Check on big screen the resolutions **/
 
 @media all and (min-width: 1900px) {
 
     body {
-        width: 1900px;
+        width: 1800px;
         margin-left: auto;
         margin-right: auto;
     }
+
+/** Header **/
 
     header {
         padding: 20px 0 0 0;
-        width: 1900px;
+        width: 1800px;
         margin-left: auto;
-        margin-right: auto;
-        
+        margin-right: auto;   
     }
+
+/** Main **/
 
     main {
         height: 100%;
-        min-height: 699px;
+        min-height: 600px;
         background: url(../img/main/oryginal_2560_x2.jpg);
+        background-size: cover;
+    }
+    .motto_box {
+        padding: 150px 0 0 600px;
+    }
+
+/** About me **/
+
+    .about_me_photo_s {
+        width: 300px; 
+    }
+
+/** My skills **/
+
+    .my_skills_container {
+        justify-content: space-evenly;
+    }
+
+    .skills {
+        width: 200px;
+        height: 200px;
+        margin: 10px;
     }
 }
 
-**/

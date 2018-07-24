@@ -113,14 +113,23 @@ p, a {
 }
 
 /** Header **/
-
+body {
+    margin-top: 12vh;
+}
 header {
     justify-content: space-between;
-    padding: 8px 10px 6px 12px;
+    padding: 10px 10px 0 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+    background-color: white;
 }
 
 .logo_xs {
     height: 56px;  
+    padding: 0 0 0 10px;
 }
 
 a:hover .logo_xs {
@@ -238,7 +247,6 @@ a:hover .portfolio_link {
     color: #917840;
 }
 
-
 /** About me - section **/
 .about_me {
     margin: 10px 0 10px 0;
@@ -258,6 +266,7 @@ a:hover .portfolio_link {
 
 .about_me_photo {
     width: 50%; 
+    padding: 0 0 10px 0;
 }
 
 .photo_ep {
@@ -321,6 +330,9 @@ address p {
 @media all and (max-width:309px) { 
 
 /** Header **/
+    body {
+        margin-top: 10vh;
+    }
 
     .logo_xs {
         height: 48px;
@@ -401,7 +413,7 @@ address p {
 /** Line under header **/
 
     .line_end {
-        margin: 0 0 15px 0;
+        margin: 0;
     }
 
 /** Main - hero image **/
@@ -432,6 +444,7 @@ address p {
         font-size: 1.1em;
         max-width: 85%;
         letter-spacing: 0.1em;
+        word-spacing: 3px;
         line-height: 150%;
         text-align: justify;
         animation-name: motto;
@@ -457,7 +470,7 @@ address p {
 /** Header **/
 
     header {
-        padding: 10px;   
+        padding: 10px 10px 0 0;   
     }
 
     .logo_m {
@@ -558,11 +571,12 @@ address p {
 /** Header **/
 
     header {
-        padding: 15px 20px 10px 18px;
+        padding: 15px 20px 0 0;
     }
 
     .logo_m {
         height: 70px;
+        padding: 0 0 0 18px;
     }
 
     .autor_name_m {
@@ -629,12 +643,16 @@ address p {
 /** Header **/
 
     header {
-        margin: 20px 0 10px 0;
-        padding: 0;
+        padding: 20px 0 0 0;
+        width: 1025px;
+        margin-left: auto;
+        margin-right: auto;
+        
     }
 
     .logo_m {
         height: 70px;
+        padding: 0;
     }
 
     .autor_name_m {
@@ -696,6 +714,8 @@ address p {
     }
 }
 
+/** TODO - get a bigger screen and check 
+
 @media all and (min-width: 1900px) {
 
     body {
@@ -704,9 +724,19 @@ address p {
         margin-right: auto;
     }
 
+    header {
+        padding: 20px 0 0 0;
+        width: 1900px;
+        margin-left: auto;
+        margin-right: auto;
+        
+    }
+
     main {
         height: 100%;
         min-height: 699px;
         background: url(../img/main/oryginal_2560_x2.jpg);
     }
 }
+
+**/

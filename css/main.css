@@ -273,6 +273,13 @@ a:hover .portfolio_link {
    width: 100%;
 }
 
+.about_me_paragraph {
+    line-height: 160%;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+    padding: 0 0 1em 0;
+}
+
 .aboutEP {
     color: #917840;
 }
@@ -499,6 +506,7 @@ address p {
     .about_me_text_s {
     width: 70%;
     }
+
 }
 
 @media all and (min-width:750px)  { 

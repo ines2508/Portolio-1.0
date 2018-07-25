@@ -1,12 +1,12 @@
 /** Fonts **/
 
 @font-face {
-    font-family: "Balham";
+    font-family: '"Balham"';
     src: url(../fonts/Balham.otf) format('opentype'); 
 }
 
 @font-face { 
-    font-family: "edelsans";
+    font-family: '"edelsans"';
     src: url(../fonts/edelsans_regular.otf) format('opentype'),
          url(../_edelsans_regular.otf) format('opentype');
 }
@@ -95,7 +95,7 @@ h1,
 
 h2 {
     color: #917840;
-    padding: 0 0 15px 10px;
+    padding: 0 0 10px 10px;
 }
 
 .portfolio_main_title::first-letter,
@@ -112,6 +112,7 @@ p, a, span {
 body {
     margin-top: 80px;
 }
+
 header {
     justify-content: space-between;
     padding: 10px 10px 0 0;
@@ -145,6 +146,7 @@ a:hover .logo_xs {
     display: block;
     width: 100vw;
 }
+
 .line_header {
     display: none;
 }
@@ -177,7 +179,7 @@ main {
 /** Section - general settings **/
 
 section {
-    padding: 25px 0 20px 0;
+    padding: 25px 0 25px 0;
 }
 
 /** Section - portfolio **/
@@ -185,6 +187,7 @@ section {
 .portfolio {
     box-sizing: border-box;
     width: 100vw;
+    margin: 0 0 10px 0;
 }
 
 .portfolio_main_title {
@@ -196,6 +199,7 @@ section {
     width: 100%;
     padding: 25px 0 0 0;
 }
+
 .line_box_img {
     max-width: 100vw; 
 }
@@ -224,7 +228,7 @@ a:hover .portfolio_icon {
 .portfolio_gallery,
 .portfolio_code,
 .portfolio_new_project {
-    background: url(../img/portfolio/part_all_07.jpg) no-repeat;
+    background: url(../img/portfolio.jpg);
 }
 
 .portfolio_gallery {
@@ -264,13 +268,13 @@ a:hover .portfolio_link {
 }
 
 .about_me_photo {
-    width: 50%; 
+    width: 48%; 
     padding: 0 0 10px 0;
 }
 
 .photo_ep {
     width: 100%;
-    max-width: 271px;
+    max-width: 250px;
     max-width: 100%;
     border-radius: 50%;
     padding: 0 10px 10px 0;
@@ -283,8 +287,8 @@ a:hover .portfolio_link {
 
 .about_me_paragraph {
     line-height: 160%;
-    letter-spacing: 1px;
-    word-spacing: 3px;
+    letter-spacing: 0.1em;
+    word-spacing: 0.4em;
     padding: 0 0 1em 0;
 }
 
@@ -297,6 +301,7 @@ a:hover .portfolio_link {
 .my_skills_container {
     justify-content: center;
     align-items: center;
+    margin: 5px 0 5px 0;
 }
 
 .skills {
@@ -315,7 +320,6 @@ a:hover .portfolio_link {
     justify-content: center;
     text-align: center;
 }
-
 
 /** Footer **/
 
@@ -339,6 +343,7 @@ address p {
 .email a {
     color: white;
     letter-spacing: 0.2em;
+    font-size: 0.8em;
 }
 
 .copy_right {
@@ -349,10 +354,10 @@ address p {
 }
 
 
-/** ------------------ Media -------------------- **/
+/** ------------------ MEDIA -------------------- **/
+
 
 @media all and (max-width:309px) { 
-
 
 /** Header **/
 
@@ -377,7 +382,17 @@ address p {
     main {
         height: 100%;
         min-height: 149px;
-        background: url(../img/main/oryginal_350_x1.jpg);
+        background: url(../img/main/main_310_x1.jpg);
+        background: image-set(
+            url(../img/main/main_310_x1.jpg) 1x,
+            url(../img/main/main_310_x2.jpg) 2x
+        );
+        background: -webkit-image-set(
+            url(../img/main/main_310_x1.jpg) 1x,
+            url(../img/main/main_310_x2.jpg) 2x
+        );
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 
     .skills {
@@ -394,29 +409,48 @@ address p {
 
 @media all and (min-width: 310px) and (max-width:450px) {
 
-
 /** Main - hero image **/
 
     main {
         height: 100%;
         min-height: 192px;
-        background: url(../img/main/oryginal_450_x1.jpg);
+        background: url(../img/main/main_450_x1.jpg);
+        background: image-set(
+            url(../img/main/main_450_x1.jpg) 1x,
+            url(../img/main/main_450_x2.jpg) 2x
+        );
+        background: -webkit-image-set(
+            url(../img/main/main_450_x1.jpg) 1x,
+            url(../img/main/main_450_x2.jpg) 2x
+        );
+        background-repeat: no-repeat;
+        background-size: cover;
     }
-}
+
     .skills {
         margin: 2vw;
     }
+}
 
 
 @media all and (min-width: 451px) and (max-width:500px) {
-
 
 /** Main - hero image **/
 
     main {
         height: 100%;
         min-height: 214px;
-        background: url(../img/main/oryginal_500_x1.jpg);
+        background: url(../img/main/main_500_x1.jpg);
+        background: image-set(
+            url(../img/main/main_500_x1.jpg) 1x,
+            url(../img/main/main_500_x2.jpg) 2x
+        );
+        background: -webkit-image-set(
+            url(../img/main/main_500_x1.jpg) 1x,
+            url(../img/main/main_500_x2.jpg) 2x
+        );
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 
 /** About me - section **/
@@ -434,7 +468,6 @@ address p {
     .about_me_text_s {
        width: 80%;
     }
-
 
 /** My skils **/
 
@@ -485,9 +518,9 @@ address p {
         font-size: 1.1em;
         max-width: 85%;
         letter-spacing: 0.1em;
-        word-spacing: 3px;
+        word-spacing: 0.2em;
         line-height: 150%;
-        text-align: justify;
+        text-align: left;
         animation-name: motto;
         animation-duration: 5s;
         animation-timing-function: ease-in;
@@ -500,14 +533,12 @@ address p {
         animation-name: motto_words;
         animation-duration: 8s;
         animation-timing-function: ease-in;
-        font-size: 1.5em;
+        font-size: 1.3em;
     }
 }
 
 
-
 @media all and (min-width:501px) and (max-width:750px) { 
-
 
 /** Header **/
 
@@ -528,13 +559,22 @@ address p {
     main {
         height: 100%;
         min-height: 276px;
-        background: url(../img/main/oryginal_750_x1.jpg);
+        background: url(../img/main/main_750_x1.jpg);
+        background: image-set(
+            url(../img/main/main_750_x1.jpg) 1x,
+            url(../img/main/main_750_x2.jpg) 2x
+        );
+        background: -webkit-image-set(
+            url(../img/main/main_750_x1.jpg) 1x,
+            url(../img/main/main_750_x2.jpg) 2x
+        );
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 
     .motto_box {
         padding: 35px 10px 0 215px;
     }
-
 
 /** Section - portfolio links **/
 
@@ -578,8 +618,7 @@ address p {
 
 @media all and (min-width:750px)  { 
 
-
-/** Titles of setions **/
+/** Titles of sections **/
 
     h2 {
         padding-left: 20px;
@@ -593,8 +632,12 @@ address p {
     }
     
     .motto {
-        font-size: 1.2em;
+        font-size: 1.3em;
         text-align: left;
+    }
+
+    .bold_names {
+        font-size: 1.4em;
     }
 
 /** Section - portfolio links **/
@@ -616,7 +659,7 @@ address p {
     }
 
     .about_me_photo_s {
-        width: 25%; 
+        width: 24%; 
     }
     
     .about_me_text_s {
@@ -648,7 +691,17 @@ address p {
     main {
         height: 100%;
         min-height: 377px;
-        background: url(../img/main/oryginal_1024.jpg);
+        background: url(../img/main/main_1024_x1.jpg);
+        background: image-set(
+            url(../img/main/main_1024_x1.jpg) 1x,
+            url(../img/main/main_1024_x2.jpg) 2x
+        );
+        background: -webkit-image-set(
+            url(../img/main/main_1024_x1.jpg) 1x,
+            url(../img/main/main_1024_x2.jpg) 2x
+        );
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 
     .motto_box {
@@ -681,8 +734,10 @@ address p {
     }
 
     .copy_right {
-        text-align: right;
+        display: flex;
         width: 30%;
+        justify-content: flex-end;
+        align-items: flex-end;
     }
 
     address p {
@@ -696,7 +751,7 @@ address p {
 @media all and (min-width:1025px) {  
 
     body {
-        width: 1025px;
+        width: 1024px;
         margin-left: auto;
         margin-right: auto;
     }
@@ -704,15 +759,15 @@ address p {
 /** Header **/
 
     header {
-        padding: 20px 0 0 0;
-        width: 1025px;
+        padding: 15px 10px 0 0;
+        width: 1024px;
         margin-left: auto;
         margin-right: auto;  
     }
 
     .logo_m {
         height: 70px;
-        padding: 0;
+        padding: 0 0 0 10px;
     }
 
     .autor_name_m {
@@ -724,14 +779,17 @@ address p {
     main {
         height: 100%;
         min-height: 377px;
-        background-image: url(../img/main/oryginal_1024.jpg);
-        background-image: -webkit-image-set(
-            url(../img/main/oryginal_1024.jpg) 1x,
-            url(../img/main/oryginal_1024_x2.jpg) 2x
-        );   
-        background-image: image-set(
-            url(../img/main/oryginal_1024.jpg) 1x,
-            url(../img/main/oryginal_1024_x2.jpg) 2x);
+        background: url(../img/main/main_1024_x1.jpg);
+        background: image-set(
+            url(../img/main/main_1024_x1.jpg) 1x,
+            url(../img/main/main_1024_x2.jpg) 2x
+        );
+        background: -webkit-image-set(
+            url(../img/main/main_1024_x1.jpg) 1x,
+            url(../img/main/main_1024_x2.jpg) 2x
+        );
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 
     .motto_box {
@@ -750,7 +808,6 @@ address p {
         text-align: left;
     }
 
-
 /** My skills **/
 
     .my_skills_container {
@@ -767,12 +824,14 @@ address p {
 
     footer {
         justify-content: space-between;
-        padding: 0 20px 10px 0;
+        padding: 0 30px 10px 0;
     }
 
     .copy_right {
-        text-align: right;
+        display: flex;
         width: 30%;
+        justify-content: flex-end;
+        align-items: flex-end;
     }
 
     address p {
@@ -781,8 +840,6 @@ address p {
         padding: 10px 0 0 30px;
     }
 }
-
-/** TODO Check on big screen the resolutions **/
 
 @media all and (min-width: 1900px) {
 
@@ -806,9 +863,19 @@ address p {
     main {
         height: 100%;
         min-height: 600px;
-        background: url(../img/main/oryginal_2560_x2.jpg);
+        background: url(../img/main/main_1800_x1.jpg);
+        background: image-set(
+            url(../img/main/main_1800_x1.jpg) 1x,
+            url(../img/main/main_1800_x2.jpg) 2x
+        );
+        background: -webkit-image-set(
+            url(../img/main/main_1800_x1.jpg) 1x,
+            url(../img/main/main_1800_x2.jpg) 2x
+        );
+        background-repeat: no-repeat;
         background-size: cover;
     }
+
     .motto_box {
         padding: 150px 0 0 600px;
     }

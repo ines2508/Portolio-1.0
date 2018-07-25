@@ -7,6 +7,20 @@
         <meta name="description" content="Portfolio site">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="css/main.css">
+
+<!-- Favicon-->
+        <link rel="icon" type="image/png" href="img/favicon/favicon-16x16.png" sizes="16x16" />
+        <link rel="icon" type="image/png" href="img/favicon/favicon-32x32.png" sizes="32x32" />
+        <link rel="icon" type="image/png" href="img/favicon/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/png" href="img/favicon/favicon-160x160.png" sizes="160x160" />
+        <link rel="icon" type="image/png" href="img/favicon/favicon-196x196.png" sizes="196x196" />
+        <link rel="shortcut icon" href="favicon.ico" />
+        <link rel="icon" sizes="192x192" href="img/favicon/icon.png">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="img/favicon/mstile-144x144.png">
+        <meta name="msapplication-square310x310logo" content="img/favicon/icon_largetile.png">
+<!-- End of favicon-->
+
     </head>
     <body>
         <header>
@@ -22,30 +36,29 @@
             <div class="line_box line_header">
                     <hr class="line_s line_m line_end">    
             </div>
-        
         </header>
         <main>   
             <div class="motto_box">
                 <p class="motto_title">Dreams come true...</p>
                 <p class="motto">Creative soul will <span class="bold_names">always</span> 
                     find the way to make the world look 
-                    <span class="bold_names">prettier...</span></p>
+                    <span class="bold_names">prettier...</span>
+                </p>
             </div>
         </main>
         <section class="portfolio">
             <h2 class="portfolio_main_title">My work</h2>
             <article>
                 <div class="portfolio_sites_xs portfolio_sites_m portfolio_sites_l">
-                        <a href="https://www.deviantart.com/ines2508/gallery/" alt="Gallery with my design on DeviantArt">
+                    <a href="https://www.deviantart.com/ines2508/gallery/" alt="Gallery with my design on DeviantArt">
                         <div class="portfolio_img portfolio_gallery">
                             <div class="line_box_img">
                                 <hr class="line_s line_m">
                             </div>
-                            <p class="portfolio_icon portfolio_icon_photo">&#128247</p>
+                            <p class="portfolio_icon portfolio_icon_photo">&#128247;</p>
                         </div>
                         <h3 class="portfolio_title">Gallery</h3>
-                        <p class="portfolio_link">Graphics, Photography
-                        </p>
+                        <p class="portfolio_link">Graphics, Photography</p>
                     </a>
                 </div>
                 <div class="portfolio_sites_xs portfolio_sites_m portfolio_sites_l">
@@ -57,8 +70,7 @@
                             <p class="portfolio_icon portfolio_icon_code">&#10096; .. &#10097;</p>
                         </div>
                         <h3 class="portfolio_title">Code</h3>
-                        <p class="portfolio_link">GitHub Repository
-                        </p>
+                        <p class="portfolio_link">GitHub Repository</p>
                     </a>
                 </div>
                 <div class="portfolio_sites_xs portfolio_sites_m portfolio_sites_l">
@@ -70,8 +82,7 @@
                             <p class="portfolio_icon portfolio_icon_new">&#127942;</p>
                         </div>
                         <h3 class="portfolio_title">Last projects</h3>
-                        <p class="portfolio_link">Animal Trading Card
-                        </p>
+                        <p class="portfolio_link">Animal Trading Card</p>
                     </a>
                 </div>
             </article>
@@ -82,8 +93,15 @@
         <section class="about_me">
             <h2 class="about_me_title">About me</h2>
             <article class="about_me_info">
-                <div class="about_me_photo about_me_photo_s">
-                    <img class="photo_ep" src="img/ewe03.jpg" alt="Photo of Ewelina Pluta">
+                <div class="about_me_photo about_me_photo_s">     
+                    <picture>                                    
+                        <source media="(max-width: 45px)" srcset="img/portrait/portrait_200_x1.jpg">
+                        <source media="(min-width: 451px) and (max-width:500px)" srcset="img/portrait/portrait_100_x1.jpg">
+                        <source media="(min-width: 501px) and (max-width:750px)" srcset="img/portrait/portrait_200_x1.jpg">
+                        <source media="(min-width: 751px) and (max-width:1890px)" srcset="img/portrait/portrait_250_x1.jpg">
+                        <source media="(min-width: 1900px)" srcset="img/portrait/portrait_300_x1.jpg">
+                        <img class="photo_ep" src="img/portrait/portrait_250_x1.jpg" alt="Portrait of Ewelina Pluta">
+                    </picture>
                 </div>
                 <div class="about_me_text about_me_text_s">
                     <p class="about_me_paragraph">The artist who tries to meet practical approach with 
@@ -100,7 +118,7 @@
             </article>
         </section>
         <div class="line_box">
-                <hr class="line_s line_m line_end">
+            <hr class="line_s line_m line_end">
         </div>
         <section class="my_skills">
             <h2 class="about_me_title">My skills</h2>
@@ -135,9 +153,8 @@
             <div class="line_box">
                 <hr class="line_s line_m line_end">
             </div>
-            
             <address>
-                <p>Want the project? Just write: &ensp;
+                <p>Want the project? Just write:&ensp;
                     <span class="email">
                         <a href="mailto:ewelina_pluta@yahoo.com?subject=Offer%20from%20the%20portfolio%20site" target="_top">ewelina_pluta@yahoo.com</a>
                     </span>
